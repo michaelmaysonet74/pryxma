@@ -5,8 +5,10 @@ import React from 'react';
 class Footer extends React.Component {
 	render () {
 		return (
-			<div>
-				<h2>Footer Component</h2>
+			<div className="footer container container-fluid">
+      	<p className="text-center"> 
+					© 2017 pryxma.com. All Rights Reserved.
+				</p>
 			</div>
 		);
 	}

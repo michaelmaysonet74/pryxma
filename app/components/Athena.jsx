@@ -1,12 +1,13 @@
 'use strict';
 
 import React from 'react';
+import Space from './Space.jsx';
 
 class Athena extends React.Component {
 	render () {
 		return (
 			<div>
-				<h2>Athena Component</h2>
+				<Space/>
 			</div>
 		);
 	}

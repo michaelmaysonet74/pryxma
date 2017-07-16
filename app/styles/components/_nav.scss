@@ -1,0 +1,38 @@
+.navbar {
+	background-color: #F5F5F5;
+	height: 10px !important;
+  width: 100%;  
+}
+
+.active {
+  background-color: #8F9097; 
+}
+
+.icon-bar {
+  background-color: $text-gray;
+}
+
+.navbar-brand {
+  font-size: 1.8em;
+}
+
+.navbar-brand:hover {
+  color:#8F9097;
+}
+
+.navbar-toggle {
+  border: 1px solid #474747 ;
+}
+
+.navbar-text-color{
+  color: #474747; 
+}
+
+.navbar-nav li a:hover{
+  background-color: #8F9097;
+  color: white !important;
+}
+
+.navbar-opacity {
+  opacity: 0.9;
+}

@@ -1,0 +1,20 @@
+#home {
+	background-color: $background-dark-gray; 
+	color:$white; 
+	height: 100%;
+
+	p.lead {
+		font-size:125%;
+		font-style:italic; 
+	}
+}
+
+#topRow {
+	color: $white;
+	margin-top: 50px;
+	text-align: center;
+
+	h1 {
+		font-size: 600%;
+	}
+}

@@ -1,23 +1,22 @@
+'use strict';
 
 const webpack = require('webpack');
 const path = require('path');
-
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-
-const bootstrapExtract = new ExtractTextPlugin({
-  filename: 'bootstrap.css'
-});
+//const isProd = process.env.NODE_ENV === 'production';
 
 const extractPlugin = new ExtractTextPlugin({
-  filename: 'main.css'
+  filename: 'css/main.css'
 });
 
 module.exports = {
-	entry: ['./app/app.jsx'], 
+	entry: {
+		app: './app/app.jsx'
+	}, 
 	output: {
 		path: path.resolve(__dirname, 'public'),
 		filename: 'bundle.js',
-		publicPath: '/public'
+		publicPath: 'public/'
 	},
 	resolve: {
 		modules: [
@@ -25,7 +24,8 @@ module.exports = {
 		], 
 		alias: {
 			Pryxma: path.resolve(__dirname, 'app/components/Pryxma.jsx'),
-			iOSAppsService: path.resolve(__dirname, 'app/services/ios-apps-service.js')
+			iOSAppsService: path.resolve(__dirname, 'app/services/ios-apps-service.js'),
+			Utils: path.resolve(__dirname, 'app/utils/')
 		}
 	},
 	module: {
@@ -40,10 +40,10 @@ module.exports = {
 				exclude: /(node_modules|bower_componets)/
 			}, {
 				test: /\.css$/,
-				use: bootstrapExtract.extract({
-						fallback: 'style-loader',
-						use: ['css-loader']
-				})
+				use: [
+					'style-loader',
+					'css-loader'
+				]
 			}, {
 				test: /\.scss$/,
 				use: extractPlugin.extract({
@@ -52,18 +52,10 @@ module.exports = {
 						'sass-loader'
 					]
 				})
-			}, {
-				test: /\.(ttf|eot|svg|woff2)$/,
-				use: ['file-loader']
-			}, {
-				test: /\.woff$/,
-				use: [
-					'url-loader?limit=10000&minetype=application/font-woff'
-				]
-			}]
+			}, 
+		]
 	}, 
 	plugins: [
-		bootstrapExtract,
 		extractPlugin,
 		new webpack.ProvidePlugin({
 			$: 'jquery',
