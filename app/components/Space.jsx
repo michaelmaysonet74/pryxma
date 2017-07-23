@@ -1,18 +1,15 @@
 'use strict';
 
-import React, {Component} from 'react';
+import React from 'react';
 
-class Space extends Component {
-
-	render () {
-		return (
+export default function Space ({size}) {
+	return (
 			<div>
-				<br/>
-				<br/>
-				<br/>
+				{() => {
+					for (let i = 0; i < size; i++){
+						return <br />
+					}
+				}}
 			</div>
 		);
-	}
 }
-
-export default Space;

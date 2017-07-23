@@ -1,7 +1,7 @@
 'use strict'; 
 
-const upperFirst = (word = '') => {
-	return word.slice(0, 1).toUpperCase() + word.slice(1);
+const capitalize = (word = '') => {
+	return word.charAt(0).toUpperCase() + word.slice(1);
 };
 
 const concatWords = (words = []) => {
@@ -12,12 +12,17 @@ const concatWords = (words = []) => {
 
 const camelCaseIt = (phrase = '') => {
 	return phrase.toLowerCase().split(' ').reduce((camel, Case) => {
-		return camel + upperFirst(Case);
+		return camel + capitalize(Case);
 	});
 };
 
+const removeExtension = (str = '', extension = '') => {
+	return str.replace(extension, '');
+};
+
 module.exports = {
-	upperFirst,
+	capitalize,
 	concatWords,
-	camelCaseIt
+	camelCaseIt,
+	removeExtension
 };

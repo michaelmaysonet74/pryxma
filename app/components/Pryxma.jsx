@@ -19,34 +19,40 @@ class Pryxma extends React.Component {
 			iOSAppList: []
 		};
   }  
-  
-	loadApps () {
-		//const that = this;
-
-		getApps().then((response) => {
-			const {data} = response;
-
-			this.setState({
-				iOSAppList: [...data]
-			});
-		});
-	}
-
-  componentDidMount() {
+	
+	componentDidMount() {
 		this.loadApps();
   }
+	
+	loadApps () {
+		getApps().then((apps) => {
+			debugger;
+			this.setState({
+				iOSAppList: [...apps]
+			});
+		});
+	// 	getApps().then((response) => {
+	// 		const {data} = response;
+
+	// 		this.setState({
+	// 			iOSAppList: [...data]
+	// 		});
+	// 	}).catch((error) => {
+	// 		//TODO: Handle error
+	// 	});
+	}
 
 	render () {
 		const {iOSAppList} = this.state;
 
 		return (
 			<div>  
-				<Nav iOSAppList={iOSAppList}/>
-				<Home/>
-				<AppList iOSAppList={iOSAppList}/>
-				<Athena/>
-				<BackToTop/>
-				<Footer/>
+				<Nav iOSAppList={iOSAppList} />
+				<Home />
+				<AppList iOSAppList={iOSAppList} />
+				<Athena />
+				<BackToTop />
+				<Footer />
 			</div>
 		);
 	} 

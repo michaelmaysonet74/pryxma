@@ -1,21 +1,22 @@
 'use strict';
 
-import React from 'react';
+import React, {Component} from 'react';
 import {
-	upperFirst, 
+	capitalize, 
 	concatWords, 
 	camelCaseIt
 } from 'Utils/strings-utils.js';
 
-class NavTab extends React.Component {
+class NavTab extends Component {
+	
 	render () {
 		let {title} = this.props;
 
-		const upperTitle = concatWords(upperFirst(title));
+		const capTitle = concatWords(capitalize(title));
 		const camelCaseTitle = camelCaseIt(title);
 
 		return (
-			<li id={'li' + upperTitle}>
+			<li id={'li' + capTitle}>
 				<a className="navbar-text-color" href={'#' + camelCaseTitle}>
 					{title}
 				</a>

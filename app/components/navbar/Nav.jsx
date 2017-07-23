@@ -1,11 +1,15 @@
 'use strict'; 
 
-import React from 'react';
+import React, {Component} from 'react';
 import NavTab from './NavTab.jsx';
 
-//const $ = require('jquery');
+class Nav extends Component {
 
-class Nav extends React.Component {
+	constructor (props) {
+		super(props);
+
+		this.renderNavTabs = this.renderNavTabs.bind(this);
+	}
 
 	renderNavTabs (iOSAppList) {
 		if (typeof iOSAppList !== 'undefined' && iOSAppList.length > 0) {
@@ -23,16 +27,22 @@ class Nav extends React.Component {
 				<div className="container">
 					{/*TODO: Create NavHeader Component  */}
 					<div className="navbar-header ">
-						<button type= "button" 
-										id="navbarCollapseBtn" 
-										className="navbar-toggle" 
-										data-toggle="collapse" 
-										data-target=".navbar-collapse">
+						<button 
+							type= "button" 
+							id="navbarCollapseBtn" 
+							className="navbar-toggle" 
+							data-toggle="collapse" 
+							data-target=".navbar-collapse">
 							<span className="icon-bar"></span>
 							<span className="icon-bar"></span>
 							<span className="icon-bar"></span>
 						</button>
-						<a id="navbarTitle" className="navbar-brand navbar-text-color" href="">Pryxma</a>
+						<a 
+							id="navbarTitle" 
+							className="navbar-brand navbar-text-color" 
+							href="">
+							Pryxma
+						</a>
 					</div>
 					<div className="collapse navbar-collapse">
 						<ul className="nav navbar-nav">
@@ -42,7 +52,7 @@ class Nav extends React.Component {
 								</a>
 							</li>
 							{this.renderNavTabs(iOSAppList)}
-							<NavTab title="Athena"/>
+							<NavTab title="Athena" />
 						</ul>
 					</div>		
 				</div>
