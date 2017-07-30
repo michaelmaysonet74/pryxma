@@ -1,8 +1,66 @@
+a {
+	outline: none !important;
+}
+
+.btn-lg {
+	background-color: $text-gray; 
+
+	a {
+		color:$white;
+  	text-decoration: none;
+	}
+}
+
 body {
   height: 100%;
   width: 100%;
 } 
 
+.center{
+  text-align: center;
+}
+
 .content-container {
   width: 100%;
+}
+
+.icon-bar {
+  background-color: $text-gray;
+}
+
+.link {
+	color:$white;
+	
+	&:active,
+	&:focus,
+	&:hover,
+	&:visited {
+ 		color:$white;
+  	text-decoration: none;
+	}
+}
+ 
+.margin-top {
+  margin-top: 50px;
+}
+
+.margin-bottom {
+  margin-bottom: 30px;
+}
+
+#topRow {
+	color:$white;
+  margin-top: 50px;
+	text-align: center; 
+	
+	h1 {
+		font-size: 600%;
+	}
+}
+
+@media only screen and (max-width: 766px) {
+	.collapsing, 
+	.in { 
+    background-color: #F5F5F5;
+  }
 }

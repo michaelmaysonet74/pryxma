@@ -1,0 +1,43 @@
+#athenaChat {
+	border: solid 1px $athena-blue;
+	height: 5px; 
+	width: 5px; 
+
+	&.scale {
+		animation: scaleWidth 700ms ease-in 1,
+							 scaleHeight 700ms ease-in 700ms 1;
+		animation-fill-mode: forwards;
+	}
+} 
+
+.athena-content {
+	background-color:$athena-blue; 
+	color:white;
+}
+
+@keyframes scaleHeight {
+	from {
+		height: 5px
+	}
+	to {
+		height: 600px
+	}
+}
+
+@keyframes scaleWidth {
+	from {
+		width: 5px;
+	}
+	to {
+		width: 430px;
+	}
+}
+
+@keyframes scaleWidthMobile {
+	from {
+		width: 5px;
+	}
+	to {
+		width: 340px;
+	}
+}

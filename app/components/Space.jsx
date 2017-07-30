@@ -2,14 +2,20 @@
 
 import React from 'react';
 
-export default function Space ({size}) {
+const renderBr = (size) => {
+	let breaks = [];
+	for (let i = 0; i < size; i++){
+		 breaks.push(<br key={i.toString()} />);
+	}
+
+	return breaks;
+} 
+
+export default function Space ({size, children}) {
 	return (
-			<div>
-				{() => {
-					for (let i = 0; i < size; i++){
-						return <br />
-					}
-				}}
-			</div>
-		);
+		<div>
+			{renderBr(size)}
+			{children}
+		</div>
+	);
 }

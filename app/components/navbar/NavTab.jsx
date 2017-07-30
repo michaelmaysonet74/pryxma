@@ -10,13 +10,13 @@ import {
 class NavTab extends Component {
 	
 	render () {
-		let {title} = this.props;
+		let {title, handleClick} = this.props;
 
 		const capTitle = concatWords(capitalize(title));
 		const camelCaseTitle = camelCaseIt(title);
 
 		return (
-			<li id={'li' + capTitle}>
+			<li id={'li' + capTitle} onClick={handleClick}>
 				<a className="navbar-text-color" href={'#' + camelCaseTitle}>
 					{title}
 				</a>

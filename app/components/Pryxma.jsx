@@ -6,7 +6,7 @@ import {getApps} from 'iOSAppsService';
 import Nav from './navbar/Nav.jsx';
 import Home from './Home.jsx';
 import AppList from './ios-apps/AppList.jsx';
-import Athena from './Athena.jsx';
+import Athena from './chatbots/Athena.jsx';
 import BackToTop from './BackToTop.jsx';
 import Footer from './Footer.jsx';
 
@@ -22,6 +22,9 @@ class Pryxma extends React.Component {
 	
 	componentDidMount() {
 		this.loadApps();
+		// document.addEventListener('activate.bs.scrollspy', () => {
+		// 	alert('Happening');
+		// });
   }
 	
 	loadApps () {
@@ -50,7 +53,7 @@ class Pryxma extends React.Component {
 				<Nav iOSAppList={iOSAppList} />
 				<Home />
 				<AppList iOSAppList={iOSAppList} />
-				<Athena />
+				{/* <Athena />  */}
 				<BackToTop />
 				<Footer />
 			</div>

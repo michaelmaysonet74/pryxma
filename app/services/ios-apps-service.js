@@ -16,17 +16,17 @@ export const getApps = () => {
 				id: 1,
 				title: 'Hexadecimal Code',
 				glyphicon: 'glyphicon-tasks',
-				image: 'assets/screenshots/pixmint1.png'
+				image: 'pixmint1.png'
 			}, {
 				id:2,
 				title: 'RGB Values',
 				glyphicon: 'glyphicon-tint',
-				image: 'assets/screenshots/pixmint2.png'
+				image: 'pixmint2.png'
 			}, {
 				id:3,
 				title: 'Available on iPad',
 				glyphicon: 'glyphicon-phone',
-				image: 'assets/screenshots/pixmint3.png'
+				image: 'pixmint3.png'
 			}],
 			download: 'https://itunes.apple.com/us/app/pixmint/id1084232768?mt=8'	
 		}, {
@@ -39,19 +39,19 @@ export const getApps = () => {
 			subInfo: `Transposed gives you piece of mind while you're playing live.`,
 			screenshots: [{
 				id:4,
-				title: '',
-				glyphicon: '',
-				image: 'assets/screenshots/'
+				title: 'Set Chord Progressions',
+				glyphicon: 'glyphicon-music',
+				image: 'setChord.png'
 			}, {
 				id:5,
-				title: '',
-				glyphicon: '',
-				image: 'assets/screenshots/'
+				title: 'Scroll To Change Tones',
+				glyphicon: 'glyphicon-refresh',
+				image: 'scroll.png'
 			}, {
 				id:6,
-				title: '',
-				glyphicon: '',
-				image: 'assets/screenshots/'
+				title: 'Select Natural, Sharp Or Flat',
+				glyphicon: 'glyphicon-equalizer',
+				image: 'flat.png'
 			}],
 			download: 'https://itunes.apple.com/us/app/transposed/id1081133377?mt=8'	
 		}, {
@@ -61,22 +61,22 @@ export const getApps = () => {
 			icon: 'hourglass.png',
 			info: 'Check. Mate.',
 			contentClass: 'chess-hourglass-content',
-			subInfo: 'Chess Hourglass is an easy to use timer that makes you aware of how long your moves can be..',
+			subInfo: 'Chess Hourglass is an easy to use timer that makes you aware of how long your moves can be.',
 			screenshots: [{
 				id: 7,
-				title: '',
-				glyphicon: '',
-				image: 'assets/screenshots/hourglass1.png'
+				title: 'Custom Matches',
+				glyphicon: 'glyphicon-king',
+				image: 'hourglass1.png'
 			}, {
 				id: 8,
-				title: '',
-				glyphicon: '',
-				image: 'assets/screenshots/hourglass2.png'
+				title: 'Up To Six Hours',
+				glyphicon: 'glyphicon-knight',
+				image: 'hourglass2.png'
 			}, {
 				id: 9,
-				title: '',
-				glyphicon: '',
-				image: 'assets/screenshots/hourglass3.png'
+				title: 'Pause & Restart',
+				glyphicon: 'glyphicon-queen',
+				image: 'hourglass3.png'
 			}],
 			download: 'https://itunes.apple.com/vc/app/chess-hourglass/id1082128643?mt=8'
 		}

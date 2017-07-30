@@ -1,27 +1,55 @@
 .back-to-top {
-	// TODO: Create variable for background color
-	background: #8F9097 center 43%;
+	background: $background-lite-gray center 43%;
 	border-radius: 30px;
-	bottom: 12px;
-  display: none;
-  height: 40px;
 	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	bottom: 12px;
+  height: 40px;
   outline: none !important;
-  opacity: 0.8;
+	opacity: 0;
   position: fixed;
   right: 20px;
 	text-align: center;
-	-webkit-border-radius: 30px;
 	width: 40px;
 	z-index: 999;
 
-	:hover {
-   background: $text-gray center 43%;
-  }
+	&.fade-in {
+		animation: fadeIn 0.5s ease-in 1;
+		animation-fill-mode: forwards;
+		display: block;
+
+		&:hover {
+			background: $text-gray center 43%;
+		}
+	}
+	
+	&.fade-out {
+		animation: fadeOut 0.5s ease-in 1;
+		animation-fill-mode: forwards;
+		pointer-events: none;
+	}
 }
 
 .back-to-top-icon {
   color: $white;
   font-size: 1.3em;
   top:23%;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 0.8;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 0.8;
+	}
+	to {
+		opacity: 0;
+	}
 }

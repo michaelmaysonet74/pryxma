@@ -5,7 +5,15 @@
 }
 
 .active {
-  background-color: #8F9097; 
+	background-color: #8F9097; 
+
+	a {
+		color: $white !important;
+	}
+
+	&:hover {
+		background-color: #8F9097;
+	}
 }
 
 .icon-bar {
@@ -28,9 +36,9 @@
   color: #474747; 
 }
 
-.navbar-nav li a:hover{
-  background-color: #8F9097;
-  color: white !important;
+.navbar-nav li a:hover {
+	background-color: #8F9097;
+	color: $white !important;
 }
 
 .navbar-opacity {
