@@ -1,6 +1,6 @@
 'use strict';
 
-import React from 'react';
+import React, {Component} from 'react';
 import {getApps} from 'iOSAppsService';
 
 import Nav from './navbar/Nav.jsx';
@@ -10,41 +10,37 @@ import Athena from './chatbots/Athena.jsx';
 import BackToTop from './BackToTop.jsx';
 import Footer from './Footer.jsx';
 
-class Pryxma extends React.Component {
+export default class Pryxma extends Component {
 	constructor (props) {
 		super(props);
-		this.loadApps = this.loadApps.bind(this);
-
+		
 		this.state = {
 			iOSAppList: []
 		};
-  }  
-	
-	componentDidMount() {
-		this.loadApps();
-		// document.addEventListener('activate.bs.scrollspy', () => {
-		// 	alert('Happening');
-		// });
-  }
-	
+
+		this.loadApps = this.loadApps.bind(this);
+	}  
+
 	loadApps () {
 		getApps().then((apps) => {
-			debugger;
 			this.setState({
 				iOSAppList: [...apps]
 			});
 		});
-	// 	getApps().then((response) => {
-	// 		const {data} = response;
-
-	// 		this.setState({
-	// 			iOSAppList: [...data]
-	// 		});
-	// 	}).catch((error) => {
-	// 		//TODO: Handle error
-	// 	});
+		
+		// getApps().then(({data}) => {
+		// 	this.setState({
+		// 		iOSAppList: [...data]
+		// 	});
+		// }).catch((error) => {
+		// 	// TODO: Handle error
+		// });
 	}
 
+	componentDidMount() {
+		this.loadApps();
+  }
+	
 	render () {
 		const {iOSAppList} = this.state;
 
@@ -53,12 +49,10 @@ class Pryxma extends React.Component {
 				<Nav iOSAppList={iOSAppList} />
 				<Home />
 				<AppList iOSAppList={iOSAppList} />
-				{/* <Athena />  */}
+				<Athena />  
 				<BackToTop />
 				<Footer />
 			</div>
 		);
 	} 
 }
-
-export default Pryxma;

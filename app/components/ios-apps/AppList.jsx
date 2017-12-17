@@ -12,7 +12,12 @@ class iOSAppList extends Component {
 			if (typeof iOSAppList !== 'undefined' && iOSAppList.length > 0) {
 
 				return iOSAppList.map((app) => {
-					return <IOSApp key={app.id.toString()} {...app} />
+					return (
+						<div key={app.id}>
+							<IOSApp {...app} />
+							<hr />
+						</div>
+					);
 				});
 			}
     };  

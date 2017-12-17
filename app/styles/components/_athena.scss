@@ -1,20 +1,3 @@
-#athenaChat {
-	border: solid 1px $athena-blue;
-	height: 5px; 
-	width: 5px; 
-
-	&.scale {
-		animation: scaleWidth 700ms ease-in 1,
-							 scaleHeight 700ms ease-in 700ms 1;
-		animation-fill-mode: forwards;
-	}
-} 
-
-.athena-content {
-	background-color:$athena-blue; 
-	color:white;
-}
-
 @keyframes scaleHeight {
 	from {
 		height: 5px
@@ -41,3 +24,27 @@
 		width: 340px;
 	}
 }
+
+#athenaChat {
+	border: solid 1px $athena-blue;
+	height: 5px; 
+	width: 5px; 
+
+	&.scale {
+		animation: scaleWidth 700ms ease-in 1,
+							 scaleHeight 700ms ease-in 700ms 1;
+		animation-fill-mode: forwards;
+	}
+
+	&.mobileScale {
+		animation: scaleWidthMobile 700ms ease-in 1,
+							 scaleHeight 700ms ease-in 700ms 1;
+		animation-fill-mode: forwards;
+	}
+} 
+
+.athena-content {
+	background-color:$athena-blue; 
+	color:white;
+}
+

@@ -49,9 +49,7 @@ class iOSApp extends Component {
 						sourceLink={download} 
 						icon="download-icon glyphicon glyphicon-download" 
 				/>		
-				<Space size={3}>
-					<hr />
-				</Space>
+				<Space size={3} />
 			</Section>
 		);
 	}

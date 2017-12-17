@@ -20,7 +20,7 @@ class Nav extends Component {
 	}
 
 	componentDidMount () {
-    window.addEventListener('scroll', this.handlePseudoClick);
+		window.addEventListener('scroll', this.handlePseudoClick);
 	}
 
 	componentWillUnmount () {

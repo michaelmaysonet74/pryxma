@@ -1,6 +1,6 @@
 'use strict'; 
 
-//import axios from 'axios';
+import axios from 'axios';
 
 export const getApps = () => {
 	return Promise.resolve(
@@ -18,12 +18,12 @@ export const getApps = () => {
 				glyphicon: 'glyphicon-tasks',
 				image: 'pixmint1.png'
 			}, {
-				id:2,
+				id: 2,
 				title: 'RGB Values',
 				glyphicon: 'glyphicon-tint',
 				image: 'pixmint2.png'
 			}, {
-				id:3,
+				id: 3,
 				title: 'Available on iPad',
 				glyphicon: 'glyphicon-phone',
 				image: 'pixmint3.png'
@@ -38,17 +38,17 @@ export const getApps = () => {
 			info: 'The singer needs another tone?',
 			subInfo: `Transposed gives you piece of mind while you're playing live.`,
 			screenshots: [{
-				id:4,
+				id: 4,
 				title: 'Set Chord Progressions',
 				glyphicon: 'glyphicon-music',
 				image: 'setChord.png'
 			}, {
-				id:5,
+				id: 5,
 				title: 'Scroll To Change Tones',
 				glyphicon: 'glyphicon-refresh',
 				image: 'scroll.png'
 			}, {
-				id:6,
+				id: 6,
 				title: 'Select Natural, Sharp Or Flat',
 				glyphicon: 'glyphicon-equalizer',
 				image: 'flat.png'
@@ -84,5 +84,6 @@ export const getApps = () => {
 };
 
 // export const getApps = () => {
-// 	return axios.get(`${process.env.PRYXMA_API}/apps`);
+// // 	return axios.get(`${process.env.PRYXMA_API}/apps`);
+// // 	return axios.get(`http://localhost:3000/apps`);
 // };

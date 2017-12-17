@@ -7,7 +7,7 @@
   "scripts": {
 		"build": "webpack -p",
 		"start": "node server.js",
-		"dev": "npm run build && node run start"
+		"dev": "npm run build && npm run start"
   },
   "devDependencies": {
     "axios": "^0.16.2",

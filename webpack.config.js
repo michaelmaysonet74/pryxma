@@ -3,7 +3,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-//const isProd = process.env.NODE_ENV === 'production';
+const isProd = process.env.NODE_ENV === 'production';
 
 const extractPlugin = new ExtractTextPlugin({
   filename: 'css/main.css'
@@ -62,5 +62,5 @@ module.exports = {
 			jQuery: 'jquery'
 		})
 	],
-	devtool: 'cheap-module-eval-source-map'
+	devtool: !isProd ? 'cheap-module-eval-source-map' : ''
 };
