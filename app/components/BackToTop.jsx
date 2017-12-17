@@ -55,7 +55,9 @@ export default class BackToTop extends Component {
 					href="" 
 					title="Back to Top"
 					hidden={isHidden}
-					onClick={this.handleClick}> 
+					onClick={this.handleClick}
+					onTouchEnd={() => $('#btnBackToTop').trigger('mouseleave')}
+				>
 					<strong>
 						<span 
 							className="back-to-top-icon glyphicon glyphicon-menu-up">
