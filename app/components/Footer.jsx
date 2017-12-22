@@ -2,8 +2,7 @@
 
 import React from 'react';
 
-export default function Footer () {
-
+export default function Footer() {
 	return (
 		<div className="footer container container-fluid">
 			<p className="text-center"> 
@@ -12,4 +11,3 @@ export default function Footer () {
 		</div>
 	);
 }
-

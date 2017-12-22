@@ -2,13 +2,12 @@
 
 import React from 'react';
 
-export default function Home () {
-
+export default function Home() {
 	return (
 		<div 
 			id="home" 
-			className="container container-fluid content-container">
-					{/* style={{marginTop: '50px'}} */}
+			className="container container-fluid content-container"
+		>
 			<div className="row">
 				<div 
 					id="topRow" 

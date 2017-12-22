@@ -1,9 +1,11 @@
 'use strict';
 
-import React, {Component} from 'react';
+import React from 'react';
 
-class NavHeader extends Component {
-
+function NavHeader({handleClick}) {
+  // return (
+    
+  // );
 }
 
 export default NavHeader;

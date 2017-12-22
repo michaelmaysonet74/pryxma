@@ -21,7 +21,7 @@ export default class Pryxma extends Component {
 		this.loadApps = this.loadApps.bind(this);
 	}  
 
-	loadApps () {
+	loadApps() {
 		getApps().then((apps) => {
 			this.setState({
 				iOSAppList: [...apps]
@@ -41,7 +41,7 @@ export default class Pryxma extends Component {
 		this.loadApps();
   }
 	
-	render () {
+	render() {
 		const {iOSAppList} = this.state;
 
 		return (

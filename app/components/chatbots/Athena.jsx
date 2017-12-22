@@ -8,10 +8,11 @@ import Section from './../Section.jsx';
 import Space from './../Space.jsx';
 import GitHubButton from './../app-content/SourceButton.jsx';
 
-const regex = new RegExp('iOS|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini', 'i');
+const regex = /iOS|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+const domEvents = ['scroll', 'hashchange', 'load'];
 
 export default class Athena extends Component {
-	constructor (props) {
+	constructor(props) {
 		super(props);
 
 		this.state = {
@@ -21,7 +22,7 @@ export default class Athena extends Component {
 		this.scaleChat = this.scaleChat.bind(this);
 	}
 
-	scaleChat () {
+	scaleChat() {
 		let isMobile = regex.test(navigator.userAgent);
 		let scaleClass = isMobile ? 'mobileScale' : 'scale';
 
@@ -44,30 +45,22 @@ export default class Athena extends Component {
 		} 
 	} 
 
-	componentDidMount () {
-		[
-			'scroll', 
-			'hashchange', 
-			'load',
-		].forEach((e) => {
+	componentDidMount() {
+		domEvents.forEach((e) => {
 			window.addEventListener(e, this.scaleChat);
 		});
 	}
 
-	componentWillUnmount () {
-		[
-			'scroll', 
-			'hashchange', 
-			'load',
-		].forEach((e) => {
+	componentWillUnmount() {
+		domEvents.forEach((e) => {
 			window.removeEventListener(e, this.scaleChat);
 		});
 	}
 
-	render () {
+	render() {
 		return (
 			<Section id="athena">
-				 <AppHeader 
+				<AppHeader 
 					title="Athena" 
 					subtitle="Don't know the meaning of a word? Just ask!" 
 					icon="bot.png" 
@@ -75,7 +68,9 @@ export default class Athena extends Component {
 				
 				<div className="row center margin-top margin-bottom athena-content">
 					<h1 className="center title">Real. Intelligent.</h1>
-					<p className="lead center">Understands natural language expressions based on Wit.ai Machine Learning technology.</p>
+					<p className="lead center">
+						Understands natural language expressions based on Wit.ai Machine Learning technology.
+					</p>
 					<div className="col-md-12">
 						<iframe 
 							id="athenaChat"

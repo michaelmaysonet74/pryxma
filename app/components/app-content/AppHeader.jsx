@@ -2,8 +2,7 @@
 
 import React from 'react';
 
-export default function AppHeader ({title, subtitle, icon}) {
-
+export default function AppHeader({title, subtitle, icon}) {
 	return (
 		<div className="row center">
 			<div className="col-md-6 col-md-offset-3">

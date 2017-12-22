@@ -12,7 +12,7 @@ import {camelCaseIt} from 'Utils/strings-utils.js';
 
 class iOSApp extends Component {
 
-	renderScreenShots (screenshots) {
+	renderScreenShots(screenshots) {
 		return screenshots.map((screenshot) => {
 			return (
 				<ScreenShot 
@@ -23,7 +23,7 @@ class iOSApp extends Component {
 		});
 	}
 
-	render () {
+	render() {
 		let {
 			title, 
 			subtitle,

@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 import $ from 'jquery';
 
 export default class BackToTop extends Component {
-	constructor (props) {
+	constructor(props) {
 		super(props);
 
 		this.state = {
@@ -15,7 +15,7 @@ export default class BackToTop extends Component {
 		this.handleClick = this.handleClick.bind(this);
 	}
 
-	toggleFade () {
+	toggleFade() {
 		const newState = {};
 
 		if (window.scrollY > 200) {
@@ -28,7 +28,7 @@ export default class BackToTop extends Component {
 		this.setState(newState);
 	}
 
-	handleClick (e) {
+	handleClick(e) {
 		e.preventDefault();
 		
 		$('html, body').animate({
@@ -36,15 +36,15 @@ export default class BackToTop extends Component {
 		}, 500);
 	}
 
-	componentDidMount () {
+	componentDidMount() {
 		window.addEventListener('scroll', this.toggleFade);
 	}
 
-	componentWillUnmount () {
+	componentWillUnmount() {
 		window.removeEventListener('scroll', this.toggleFade);
 	}
 	
-	render () {
+	render() {
 		let {fadeClass, isHidden} = this.state;
 
 		return (

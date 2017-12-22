@@ -4,7 +4,7 @@ import React, {Component} from 'react';
 
 class Section extends Component {
 
-	render () {
+	render() {
 		let {id, children} = this.props;
 
 		return (

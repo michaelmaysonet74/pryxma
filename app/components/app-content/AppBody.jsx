@@ -1,18 +1,13 @@
 'use strict';
 
-import React, {Component} from 'react';
+import React from 'react';
 
-class AppBody extends Component {
-
-	render () {
-		let {contentClass, children} = this.props;
-
-		return (
-			<div className={`row margin-bottom ${contentClass}`}>
-				{children}
-			</div>
-		);
-	}
+function AppBody({contentClass, children}) {
+	return (
+		<div className={`row margin-bottom ${contentClass}`}>
+			{children}
+		</div>
+	);
 }
 
 export default AppBody;

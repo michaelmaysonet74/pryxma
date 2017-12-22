@@ -3,11 +3,8 @@
 import React, {Component} from 'react';
 import NavTab from './NavTab.jsx';
 
-import $ from 'jquery';
-
 class Nav extends Component {
-
-	constructor (props) {
+	constructor(props) {
 		super(props);
 
 		this.state = {
@@ -19,15 +16,15 @@ class Nav extends Component {
 		this.handlePseudoClick = this.handlePseudoClick.bind(this);
 	}
 
-	componentDidMount () {
+	componentDidMount() {
 		window.addEventListener('scroll', this.handlePseudoClick);
 	}
 
-	componentWillUnmount () {
+	componentWillUnmount() {
     window.removeEventListener('scroll', this.handlePseudoClick);
 	}
 
-	handleClick (e) {
+	handleClick(e) {
 		this.setState((prevState, props) => {
 			return {
 				isExpanded: !prevState.isExpanded
@@ -35,7 +32,7 @@ class Nav extends Component {
 		});
 	}
 
-	handlePseudoClick (e) {
+	handlePseudoClick(e) {
 		const navbar = 	document.getElementById('mainNavbar');
 
 		if (window.scrollY > 217) {
@@ -49,7 +46,7 @@ class Nav extends Component {
 		}
 	}
 
-	renderNavTabs (iOSAppList) {
+	renderNavTabs(iOSAppList) {
 		if (typeof iOSAppList !== 'undefined' && iOSAppList.length > 0) {
 			return iOSAppList.map((app) => {
 				return <NavTab key={app.id} title={app.title} handleClick={this.handlePseudoClick} />
@@ -57,20 +54,21 @@ class Nav extends Component {
 		}	
 	}
 
-	render () {
+	render() {
 		const {iOSAppList} = this.props;
 
 		return (
 			<div id="mainNavbar" className="navbar navbar-fixed-top">
 				<div className="container">
-					<div className="navbar-header ">
+					<div className="navbar-header">
 						<button 
 							type= "button" 
 							id="navbarCollapseBtn" 
 							className="navbar-toggle" 
 							data-toggle="collapse" 
 							data-target=".navbar-collapse"
-							onClick={this.handleClick}> 
+							onClick={this.handleClick}
+						> 
 							<span className="icon-bar"></span>
 							<span className="icon-bar"></span>
 							<span className="icon-bar"></span>
@@ -78,7 +76,8 @@ class Nav extends Component {
 						<a 
 							id="navbarTitle" 
 							className="navbar-brand navbar-text-color" 
-							href="">
+							href=""
+						>
 							Pryxma
 						</a>
 					</div>

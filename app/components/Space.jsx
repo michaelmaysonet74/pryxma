@@ -11,7 +11,7 @@ const renderBr = (size) => {
 	return breaks;
 } 
 
-export default function Space ({size, children}) {
+export default function Space({size, children}) {
 	return (
 		<div>
 			{renderBr(size)}

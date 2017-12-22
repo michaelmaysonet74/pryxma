@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-export default function AppSubHeader ({info, subInfo, contentClass}) {
+export default function AppSubHeader({info, subInfo, contentClass}) {
 	return (
 		<div className={`row center ${contentClass}`}>
 			<h1 className="center title">
