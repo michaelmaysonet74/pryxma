@@ -1,6 +1,8 @@
 'use strict';
 
 import React, {Component} from 'react';
+import {camelCaseIt} from 'Utils/strings-utils.js';
+
 import Section from './../Section.jsx';
 import AppHeader from './../app-content/AppHeader.jsx';
 import AppSubHeader from './../app-content/AppSubHeader.jsx';
@@ -8,9 +10,17 @@ import AppBody from './../app-content/AppBody.jsx';
 import DownloadButton from './../app-content/SourceButton.jsx';
 import Space from './../Space.jsx';
 import ScreenShot from './../app-content/ScreenShot.jsx';
-import {camelCaseIt} from 'Utils/strings-utils.js';
 
 class iOSApp extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			isGifPlaying: false,
+		};
+
+		this.renderScreenShots = this.renderScreenShots.bind(this);
+	}
 
 	renderScreenShots(screenshots) {
 		return screenshots.map((screenshot) => {

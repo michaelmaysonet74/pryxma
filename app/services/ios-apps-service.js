@@ -41,17 +41,17 @@ export const getApps = () => {
 				id: 4,
 				title: 'Set Chord Progressions',
 				glyphicon: 'glyphicon-music',
-				image: 'setChord.png'
+				image: 'set-chord.gif'
 			}, {
 				id: 5,
 				title: 'Scroll To Change Tones',
 				glyphicon: 'glyphicon-refresh',
-				image: 'scroll.png'
-			}, {
+        image: 'scroll.gif'
+      }, {
 				id: 6,
 				title: 'Select Natural, Sharp Or Flat',
 				glyphicon: 'glyphicon-equalizer',
-				image: 'flat.png'
+				image: 'natural-sharp-flat.gif'
 			}],
 			download: 'https://itunes.apple.com/us/app/transposed/id1081133377?mt=8'	
 		}, {
