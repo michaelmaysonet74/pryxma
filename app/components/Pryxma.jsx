@@ -39,7 +39,7 @@ export default class Pryxma extends Component {
 
 	componentDidMount() {
 		this.loadApps();
-  }
+  	}
 	
 	render() {
 		const {iOSAppList} = this.state;
