@@ -88,6 +88,7 @@ class Nav extends Component {
 									<span className="glyphicon glyphicon-home"></span>
 								</a>
 							</li>
+              <NavTab title="Tea" handleClick={this.handlePseudoClick} />
 							{this.renderNavTabs(iOSAppList)}
 							<NavTab title="Athena" handleClick={this.handlePseudoClick} />
 						</ul>

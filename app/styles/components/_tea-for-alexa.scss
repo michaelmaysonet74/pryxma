@@ -1,0 +1,56 @@
+.tea-content {
+  background-color: rgb(208, 67, 68);
+  color: $white;
+}
+
+// .container {
+//   width: 400px;
+//   text-align: center;
+//   padding: 20px;
+// }
+
+// .box {
+//   background-color: pink;
+//   width: 200px;
+//   height: 200px;
+//   position: relative;
+//   left: -50%;
+//   display: inline-block;
+// }
+
+// .little-box {
+//   background-color: gray;
+//   width: 100px;
+//   height: 100px;
+//   position: relative;
+//   left: -100%;
+//   display: inline-block;
+// }
+
+// @keyframes move-to-right {
+//   from {
+//     left: -50%;
+//   }
+//   to {
+//     left: 25%;
+//   }
+// }
+
+// @keyframes move-lil-to-right {
+//   from {
+//     left: -100%;
+//   }
+//   to {
+//     left: 15%;
+//   }
+// }
+
+// .introduced-1 {
+//   animation: move-to-right 1.5s ease-in-out 1;
+//   animation-fill-mode: forwards;
+// }
+
+// .introduced-2 {
+//   animation: move-lil-to-right 1.6s ease-in-out 1;
+//   animation-fill-mode: forwards;
+// }

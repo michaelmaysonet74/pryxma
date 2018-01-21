@@ -11,7 +11,7 @@ import GitHubButton from './../app-content/SourceButton.jsx';
 const regex = /iOS|Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
 const domEvents = ['scroll', 'hashchange', 'load'];
 
-export default class Athena extends Component {
+class Athena extends Component {
 	constructor(props) {
 		super(props);
 
@@ -83,7 +83,7 @@ export default class Athena extends Component {
 				
 				<GitHubButton
 					title="GitHub"
-					sourceLink="https://github.com/michaelmaysonet74/athena_es6"
+					sourceLink="https://github.com/michaelmaysonet74/athena"
 					icon="github-icon fa fa-github"
 				/>		
 				<Space size={3} />		
@@ -91,3 +91,5 @@ export default class Athena extends Component {
 		);
 	}
 }
+
+export default Athena;

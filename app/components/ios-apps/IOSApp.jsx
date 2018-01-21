@@ -15,10 +15,6 @@ class iOSApp extends Component {
 	constructor(props) {
 		super(props);
 
-		this.state = {
-			isGifPlaying: false,
-		};
-
 		this.renderScreenShots = this.renderScreenShots.bind(this);
 	}
 

@@ -9,8 +9,9 @@ import AppList from './ios-apps/AppList.jsx';
 import Athena from './chatbots/Athena.jsx';
 import BackToTop from './BackToTop.jsx';
 import Footer from './Footer.jsx';
+import TeaForAlexa from './chatbots/TeaForAlexa.jsx';
 
-export default class Pryxma extends Component {
+class Pryxma extends Component {
 	constructor (props) {
 		super(props);
 		
@@ -39,7 +40,7 @@ export default class Pryxma extends Component {
 
 	componentDidMount() {
 		this.loadApps();
-  	}
+  }
 	
 	render() {
 		const {iOSAppList} = this.state;
@@ -48,11 +49,14 @@ export default class Pryxma extends Component {
 			<div>  
 				<Nav iOSAppList={iOSAppList} />
 				<Home />
+        <TeaForAlexa />
 				<AppList iOSAppList={iOSAppList} />
-				<Athena />  
+				<Athena />
 				<BackToTop />
 				<Footer />
 			</div>
 		);
 	} 
 }
+
+export default Pryxma;
