@@ -49,7 +49,7 @@ class Pryxma extends Component {
 			<div>  
 				<Nav iOSAppList={iOSAppList} />
 				<Home />
-        <TeaForAlexa />
+        			<TeaForAlexa />
 				<AppList iOSAppList={iOSAppList} />
 				<Athena />
 				<BackToTop />
