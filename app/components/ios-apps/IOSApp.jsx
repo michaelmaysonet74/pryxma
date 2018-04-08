@@ -21,9 +21,9 @@ class iOSApp extends Component {
 	renderScreenShots(screenshots) {
 		return screenshots.map((screenshot) => {
 			return (
-				<ScreenShot 
-					key={screenshot.id.toString()} 
-					{...screenshot} 
+				<ScreenShot
+					key={screenshot.id.toString()}
+					{...screenshot}
 				/>
 			);
 		});
@@ -31,7 +31,7 @@ class iOSApp extends Component {
 
 	render() {
 		let {
-			title, 
+			title,
 			subtitle,
 			icon,
 			contentClass,
@@ -50,11 +50,11 @@ class iOSApp extends Component {
 				<AppBody contentClass={contentClass}>
 					{this.renderScreenShots(screenshots)}
 				</AppBody>
-				<DownloadButton 
-						title="Download" 
-						sourceLink={download} 
-						icon="download-icon glyphicon glyphicon-download" 
-				/>		
+				<DownloadButton
+						title={download.title}
+						sourceLink={download.link}
+						icon={download.icon}
+				/>
 				<Space size={3} />
 			</Section>
 		);

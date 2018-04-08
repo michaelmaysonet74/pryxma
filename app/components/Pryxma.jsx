@@ -14,13 +14,13 @@ import TeaForAlexa from './chatbots/TeaForAlexa.jsx';
 class Pryxma extends Component {
 	constructor (props) {
 		super(props);
-		
+
 		this.state = {
 			iOSAppList: []
 		};
 
 		this.loadApps = this.loadApps.bind(this);
-	}  
+	}
 
 	loadApps() {
 		getApps().then((apps) => {
@@ -28,7 +28,7 @@ class Pryxma extends Component {
 				iOSAppList: [...apps]
 			});
 		});
-		
+
 		// getApps().then(({data}) => {
 		// 	this.setState({
 		// 		iOSAppList: [...data]
@@ -41,22 +41,22 @@ class Pryxma extends Component {
 	componentDidMount() {
 		this.loadApps();
   }
-	
+
 	render() {
 		const {iOSAppList} = this.state;
 
 		return (
-			<div>  
+			<div>
 				<Nav iOSAppList={iOSAppList} />
 				<Home />
-        			<TeaForAlexa />
+				{/* <TeaForAlexa /> */}
 				<AppList iOSAppList={iOSAppList} />
 				<Athena />
 				<BackToTop />
 				<Footer />
 			</div>
 		);
-	} 
+	}
 }
 
 export default Pryxma;

@@ -1,4 +1,4 @@
-'use strict'; 
+'use strict';
 
 import React, {Component} from 'react';
 import NavTab from './NavTab.jsx';
@@ -40,8 +40,8 @@ class Nav extends Component {
 		} else {
 			navbar.classList.remove('navbar-opacity');
 		}
-		
-		if (window.innerWidth < 776 && this.state.isExpanded) {	
+
+		if (window.innerWidth < 776 && this.state.isExpanded) {
 			document.querySelector('.navbar-toggle').click();
 		}
 	}
@@ -51,7 +51,7 @@ class Nav extends Component {
 			return iOSAppList.map((app) => {
 				return <NavTab key={app.id} title={app.title} handleClick={this.handlePseudoClick} />
 			});
-		}	
+		}
 	}
 
 	render() {
@@ -61,21 +61,21 @@ class Nav extends Component {
 			<div id="mainNavbar" className="navbar navbar-fixed-top">
 				<div className="container">
 					<div className="navbar-header">
-						<button 
-							type= "button" 
-							id="navbarCollapseBtn" 
-							className="navbar-toggle" 
-							data-toggle="collapse" 
+						<button
+							type= "button"
+							id="navbarCollapseBtn"
+							className="navbar-toggle"
+							data-toggle="collapse"
 							data-target=".navbar-collapse"
 							onClick={this.handleClick}
-						> 
+						>
 							<span className="icon-bar"></span>
 							<span className="icon-bar"></span>
 							<span className="icon-bar"></span>
 						</button>
-						<a 
-							id="navbarTitle" 
-							className="navbar-brand navbar-text-color" 
+						<a
+							id="navbarTitle"
+							className="navbar-brand navbar-text-color"
 							href=""
 						>
 							Pryxma
@@ -88,13 +88,13 @@ class Nav extends Component {
 									<span className="glyphicon glyphicon-home"></span>
 								</a>
 							</li>
-              <NavTab title="Tea" handleClick={this.handlePseudoClick} />
 							{this.renderNavTabs(iOSAppList)}
+							{/* <NavTab title="Tea" handleClick={this.handlePseudoClick} /> */}
 							<NavTab title="Athena" handleClick={this.handlePseudoClick} />
 						</ul>
-					</div>		
+					</div>
 				</div>
-			</div>	
+			</div>
 		);
 	}
 }
