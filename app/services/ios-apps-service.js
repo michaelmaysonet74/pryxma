@@ -85,9 +85,9 @@ export const getApps = () => {
 				image: 'hourglass3.png'
 			}],
 			download: {
-					title: 'GitHub',
-					link: 'https://github.com/michaelmaysonet74/chess-hourglass',
-					icon: 'github-icon fa fa-github',
+				title: 'Expo',
+				link: 'https://expo.io/@michaelmaysonet74/chess-hourglass',
+				icon: 'fa fa-mobile',
 			},
 		},
 	]);
