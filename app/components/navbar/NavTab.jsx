@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import {
 	capitalize, 
@@ -9,17 +7,18 @@ import {
 
 function NavTab(props) {
 	let {
-		title, 
-		handleClick
+		title,
+		handleClick,
+		isActive = false,
 	} = props;
 
 	const capTitle = concatWords(capitalize(title));
 	const camelCaseTitle = camelCaseIt(title);
 
 	return (
-		<li id={'li' + capTitle} onClick={handleClick}>
-			<a className="navbar-text-color" href={'#' + camelCaseTitle}>
-				{title}
+		<li id={ 'li' + capTitle } className={ isActive && 'active' } onClick={ handleClick }>
+			<a className="navbar-text-color" href={ `#${camelCaseTitle}` }>
+				{ title }
 			</a>
 		</li>
 	);

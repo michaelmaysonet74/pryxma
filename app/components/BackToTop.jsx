@@ -1,5 +1,3 @@
-'use strict';
-
 import React, {Component} from 'react';
 import $ from 'jquery';
 
@@ -9,8 +7,9 @@ export default class BackToTop extends Component {
 
 		this.state = {
 			fadeClass:'',
-			isHidden: true
+			isHidden: true,
 		};
+
 		this.toggleFade = this.toggleFade.bind(this);
 		this.handleClick = this.handleClick.bind(this);
 	}
@@ -30,7 +29,7 @@ export default class BackToTop extends Component {
 
 	handleClick(e) {
 		e.preventDefault();
-		
+
 		$('html, body').animate({
 			scrollTop: 0
 		}, 500);
@@ -48,23 +47,21 @@ export default class BackToTop extends Component {
 		let {fadeClass, isHidden} = this.state;
 
 		return (
-			<div>
-				<a 
-					id="btnBackToTop" 
-					className={`back-to-top ${fadeClass}`} 
-					href="" 
-					title="Back to Top"
-					hidden={isHidden}
-					onClick={this.handleClick}
-					onTouchEnd={() => $('#btnBackToTop').trigger('mouseleave')}
-				>
-					<strong>
-						<span 
-							className="back-to-top-icon glyphicon glyphicon-menu-up">
-						</span>
-					</strong>
-				</a>
-			</div>
+		<div>
+			<a 
+				id="btnBackToTop" 
+				className={ `back-to-top ${fadeClass}` } 
+				href="" 
+				title="Back to Top"
+				hidden={ isHidden }
+				onClick={ this.handleClick }
+				onTouchEnd={ () => $('#btnBackToTop').trigger('mouseleave') }
+			>
+				<strong>
+					<span className="back-to-top-icon glyphicon glyphicon-menu-up"></span>
+				</strong>
+			</a>
+		</div>
 		);	
 	}
 }

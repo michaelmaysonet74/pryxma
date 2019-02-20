@@ -1,6 +1,4 @@
-'use strict';
-
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import NavTab from './NavTab.jsx';
 
 class Nav extends Component {
@@ -8,7 +6,7 @@ class Nav extends Component {
 		super(props);
 
 		this.state = {
-			isExpanded: false
+			isExpanded: false,
 		};
 
 		this.renderNavTabs = this.renderNavTabs.bind(this);
@@ -21,7 +19,7 @@ class Nav extends Component {
 	}
 
 	componentWillUnmount() {
-    window.removeEventListener('scroll', this.handlePseudoClick);
+		window.removeEventListener('scroll', this.handlePseudoClick);
 	}
 
 	handleClick(e) {
@@ -48,14 +46,21 @@ class Nav extends Component {
 
 	renderNavTabs(iOSAppList) {
 		if (typeof iOSAppList !== 'undefined' && iOSAppList.length > 0) {
-			return iOSAppList.map((app) => {
-				return <NavTab key={app.id} title={app.title} handleClick={this.handlePseudoClick} />
+			return iOSAppList.map(app => {
+				return (
+					<NavTab
+						key={ app.id }
+						title={ app.title }
+						handleClick={ this.handlePseudoClick }
+						isActive={ app.activeByDefault }
+					/>
+				);
 			});
 		}
 	}
 
 	render() {
-		const {iOSAppList} = this.props;
+		const { iOSAppList } = this.props;
 
 		return (
 			<div id="mainNavbar" className="navbar navbar-fixed-top">
@@ -67,7 +72,7 @@ class Nav extends Component {
 							className="navbar-toggle"
 							data-toggle="collapse"
 							data-target=".navbar-collapse"
-							onClick={this.handleClick}
+							onClick={ this.handleClick }
 						>
 							<span className="icon-bar"></span>
 							<span className="icon-bar"></span>
@@ -83,14 +88,8 @@ class Nav extends Component {
 					</div>
 					<div className="collapse navbar-collapse">
 						<ul className="nav navbar-nav">
-							<li id="liHome" className="active" onClick={this.handlePseudoClick} >
-								<a className="navbar-text-color" href="#home">
-									<span className="glyphicon glyphicon-home"></span>
-								</a>
-							</li>
-							{this.renderNavTabs(iOSAppList)}
-							{/* <NavTab title="Tea" handleClick={this.handlePseudoClick} /> */}
-							<NavTab title="Athena" handleClick={this.handlePseudoClick} />
+							{ this.renderNavTabs(iOSAppList) }
+							<NavTab title="Athena" handleClick={ this.handlePseudoClick } />
 						</ul>
 					</div>
 				</div>

@@ -1,7 +1,4 @@
-'use strict';
-
-import React, {Component} from 'react';
-import {camelCaseIt} from 'Utils/strings-utils.js';
+import React, { Component } from 'react';
 
 import Section from './../Section.jsx';
 import AppHeader from './../app-content/AppHeader.jsx';
@@ -22,8 +19,8 @@ class iOSApp extends Component {
 		return screenshots.map((screenshot) => {
 			return (
 				<ScreenShot
-					key={screenshot.id.toString()}
-					{...screenshot}
+					key={ screenshot.id.toString() }
+					{ ...screenshot }
 				/>
 			);
 		});
@@ -38,24 +35,22 @@ class iOSApp extends Component {
 			info,
 			subInfo,
 			screenshots,
-			download
+			download,
 		} = this.props;
 
-		const camelCaseTitle = camelCaseIt(title);
-
 		return (
-			<Section id={camelCaseTitle}>
-				<AppHeader title={title} subtitle={subtitle} icon={icon} />
-				<AppSubHeader info={info} subInfo={subInfo} contentClass={contentClass} />
-				<AppBody contentClass={contentClass}>
-					{this.renderScreenShots(screenshots)}
+			<Section>
+				<AppHeader title={ title } subtitle={ subtitle } icon={ icon } />
+				<AppSubHeader info={ info } subInfo={ subInfo } />
+				<AppBody>
+					{ this.renderScreenShots(screenshots) }
 				</AppBody>
 				<DownloadButton
-						title={download.title}
-						sourceLink={download.link}
-						icon={download.icon}
+					title={ download.title }
+					sourceLink={ download.link }
+					icon={ download.icon }
 				/>
-				<Space size={3} />
+				<Space size={ 3 } />
 			</Section>
 		);
 	}

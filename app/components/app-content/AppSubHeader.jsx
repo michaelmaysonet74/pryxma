@@ -1,15 +1,13 @@
-'use strict';
-
 import React from 'react';
 
-export default function AppSubHeader({info, subInfo, contentClass}) {
+export default function AppSubHeader({ info, subInfo }) {
 	return (
-		<div className={`row center ${contentClass}`}>
+		<div className="row center content content-top-radius">
 			<h1 className="center title">
-				{info}
+				{ info }
 			</h1>
 			<p className="lead center">
-				{subInfo}
+				{ subInfo }
 			</p>
 		</div>
 	);

@@ -1,19 +1,17 @@
-'use strict';
-
 import React from 'react';
 
-export default function AppHeader({title, subtitle, icon}) {
+export default function AppHeader({ title, subtitle, icon }) {
 	return (
-		<div className="row center">
+		<div className="row center margin-top">
 			<div className="col-md-6 col-md-offset-3">
 				<h1 className="app-title margin-top">
-					{title}
+					{ title }
 				</h1>
 				<p className="lead">
-					{subtitle}
+					{ subtitle }
 				</p>
 				<p className="center">
-					<img className="app-logo" src={`assets/img/${icon}`} />
+					<img className="app-logo" src={ `assets/img/${icon}` } />
 				</p>
 			</div>
 		</div>

@@ -1,13 +1,9 @@
-'use strict';
-
 import React from 'react';
 
-function AppBody({contentClass, children}) {
+export default function AppBody({ children }) {
 	return (
-		<div className={`row margin-bottom ${contentClass}`}>
-			{children}
+		<div className="row margin-bottom content content-bottom-radius">
+			{ children }
 		</div>
 	);
 }
-
-export default AppBody;

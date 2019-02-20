@@ -1,15 +1,11 @@
-'use strict';
-
-import React, {Component} from 'react';
-import {getApps} from 'iOSAppsService';
+import React, { Component } from 'react';
+import { getApps } from 'iOSAppsService';
 
 import Nav from './navbar/Nav.jsx';
-import Home from './Home.jsx';
 import AppList from './ios-apps/AppList.jsx';
 import Athena from './chatbots/Athena.jsx';
 import BackToTop from './BackToTop.jsx';
 import Footer from './Footer.jsx';
-import TeaForAlexa from './chatbots/TeaForAlexa.jsx';
 
 class Pryxma extends Component {
 	constructor (props) {
@@ -23,19 +19,9 @@ class Pryxma extends Component {
 	}
 
 	loadApps() {
-		getApps().then((apps) => {
-			this.setState({
-				iOSAppList: [...apps]
-			});
+		getApps().then(apps => {
+			this.setState({ iOSAppList: [ ...apps ] });
 		});
-
-		// getApps().then(({data}) => {
-		// 	this.setState({
-		// 		iOSAppList: [...data]
-		// 	});
-		// }).catch((error) => {
-		// 	// TODO: Handle error
-		// });
 	}
 
 	componentDidMount() {
@@ -43,14 +29,12 @@ class Pryxma extends Component {
   }
 
 	render() {
-		const {iOSAppList} = this.state;
+		const { iOSAppList } = this.state;
 
 		return (
-			<div>
-				<Nav iOSAppList={iOSAppList} />
-				<Home />
-				{/* <TeaForAlexa /> */}
-				<AppList iOSAppList={iOSAppList} />
+			<div className="pryxma">
+				<Nav iOSAppList={ iOSAppList } />
+				<AppList iOSAppList={ iOSAppList } />
 				<Athena />
 				<BackToTop />
 				<Footer />

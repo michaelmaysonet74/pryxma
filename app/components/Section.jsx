@@ -1,20 +1,16 @@
-'use strict';
+import React, { Component } from 'react';
 
-import React, {Component} from 'react';
-
-class Section extends Component {
-
+export default class Section extends Component {
 	render() {
-		let {id, children} = this.props;
+		let { id, children } = this.props;
 
 		return (
 			<div 
-				id={id} 
-				className="container container-fluid content-container margin-top margin-bottom">
-				{children}
+				id={ id } 
+				className="container container-fluid content-container margin-bottom"
+			>
+				{ children }
 			</div>
 		);
 	}
 }
-
-export default Section;
