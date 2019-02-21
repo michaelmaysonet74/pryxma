@@ -1,3 +1,11 @@
 .screenshot {
 	width: 60%;
+
+	@media (max-width: 991px) and (min-width: 767px) {
+		width: 40%;
+	}
+
+	@media (max-width: 767px) and (min-width: 675px) {
+		width: 50%;
+	}
 }

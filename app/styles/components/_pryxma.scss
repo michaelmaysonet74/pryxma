@@ -12,11 +12,9 @@ a {
 	}
 }
 
-html,
 body {
-	max-width: 100%;
-	min-height: 100%;
-	overflow-x: hidden;
+  height: 100%;
+	width: 100%;
 }
 
 .center{
@@ -25,10 +23,6 @@ body {
 
 .content-container {
 	width: 100%;
-
-	@media (max-width: 767px) {
-		padding: 0;
-	}
 }
 
 .content {
@@ -74,7 +68,7 @@ body {
 }
 
 .icon-bar {
-	background-color: $text-gray;
+	background-color: #474747;
 }
 
 .link {
@@ -97,13 +91,22 @@ body {
 		text-decoration: none;
 	}
 }
- 
+
+.glyphicon {
+	top: 4px;
+}
+
 .margin-top {
 	margin-top: 30px;
 }
 
 .margin-bottom {
 	margin-bottom: 30px;
+}
+
+.title {
+  margin-top: 50px;
+  font-size: 300%;
 }
 
 @media only screen and (max-width: 766px) {

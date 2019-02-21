@@ -2,6 +2,7 @@
 	background-color: $white;
 	box-shadow: 3px 0px 5px 1px #E6E5E5;
 	height: 10px !important;
+	opacity: 1;
 	width: 100%;  
 }
 
@@ -24,10 +25,10 @@
 
 .navbar-brand {
 	font-size: 1.8em;
-}
 
-.navbar-brand:hover {
-	color:#8F9097;
+	&:hover {
+		color:#8F9097;
+	}
 }
 
 .navbar-toggle {
@@ -44,5 +45,14 @@
 }
 
 .navbar-opacity {
-	opacity: 0.9;
+	animation: opaque 1s ease-in-out forwards;
+}
+
+@keyframes opaque {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0.9;
+	}
 }

@@ -33,7 +33,7 @@ class Nav extends Component {
 	handlePseudoClick(e) {
 		const navbar = 	document.getElementById('mainNavbar');
 
-		if (window.scrollY > 217) {
+		if (window.scrollY > 50) {
 			navbar.classList.add('navbar-opacity');
 		} else {
 			navbar.classList.remove('navbar-opacity');
