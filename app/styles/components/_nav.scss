@@ -1,23 +1,25 @@
 .navbar {
-	background-color: #FCFCFC;
+	background-color: $white;
+	box-shadow: 3px 0px 5px 1px #E6E5E5;
 	height: 10px !important;
 	width: 100%;  
 }
 
 .active {
-	background-color: #8F9097; 
-
-	a {
-		color: $white !important;
-	}
+	border-bottom: solid 2px #8F9097;
 
 	&:hover {
-		background-color: #8F9097;
+		background-color: #FCFCFC;
+		color: $text-gray !important;
+	}
+
+	@media (max-width: 767px) {
+		border-bottom: none;
 	}
 }
 
 .icon-bar {
-	background-color: $text-gray;
+	background-color: #474747;
 }
 
 .navbar-brand {
@@ -29,16 +31,16 @@
 }
 
 .navbar-toggle {
-	border: 1px solid #474747;
+	border: none;
 }
 
-.navbar-text-color{
-	color: #474747; 
+.navbar-text-color {
+	color: $text-gray; 
 }
 
 .navbar-nav li a:hover {
-	background-color: #8F9097;
-	color: $white !important;
+	background-color: #FCFCFC;
+	color: $text-gray !important;
 }
 
 .navbar-opacity {

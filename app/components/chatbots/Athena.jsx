@@ -29,7 +29,7 @@ class Athena extends Component {
 		const section = document.getElementById('athena');
 		const navbarHeight = $('.navbar').height();
 		const isActive = section.getBoundingClientRect().y - navbarHeight <= navbarHeight;
-		const reachedBottom = $(window).scrollTop() + $(window).height() > $(document).height() - 200;
+		const reachedBottom = $(window).scrollTop() + $(window).height() > $(document).height() - 150;
 
 		if (
 			!this.state.isScaled
@@ -69,7 +69,7 @@ class Athena extends Component {
 					icon="bot.png" 
 				/>
 
-				<div className="row center margin-top margin-bottom content content-top-radius content-bottom-radius">
+				<div className="row center margin-bottom content content-top-radius content-bottom-radius">
 					<h1 className="center title">
 						Real. Intelligent.
 					</h1>
