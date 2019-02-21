@@ -22,5 +22,5 @@ module.exports = {
 	capitalize,
 	concatWords,
 	camelCaseIt,
-	removeExtension
+	removeExtension,
 };
