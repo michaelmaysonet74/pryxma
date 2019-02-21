@@ -47,21 +47,21 @@ export default class BackToTop extends Component {
 		let {fadeClass, isHidden} = this.state;
 
 		return (
-		<div>
-			<a 
-				id="btnBackToTop" 
-				className={ `back-to-top ${fadeClass}` } 
-				href="" 
-				title="Back to Top"
-				hidden={ isHidden }
-				onClick={ this.handleClick }
-				onTouchEnd={ () => $('#btnBackToTop').trigger('mouseleave') }
-			>
-				<strong>
-					<span className="back-to-top-icon glyphicon glyphicon-menu-up"></span>
-				</strong>
-			</a>
-		</div>
+			<div>
+				<a 
+					id="btnBackToTop" 
+					className={ `back-to-top ${fadeClass}` } 
+					href="" 
+					title="Back to Top"
+					hidden={ isHidden }
+					onClick={ this.handleClick }
+					onTouchEnd={ () => $('#btnBackToTop').trigger('mouseleave') }
+				>
+					<strong>
+						<span className="back-to-top-icon glyphicon glyphicon-menu-up"></span>
+					</strong>
+				</a>
+			</div>
 		);	
 	}
 }
