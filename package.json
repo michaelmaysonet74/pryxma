@@ -6,8 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack -p",
-    "start": "node server.js",
-    "dev": "npm run build && npm run start"
+    "start": "npm run build && node server.js"
   },
   "devDependencies": {
     "babel-core": "^6.25.0",
