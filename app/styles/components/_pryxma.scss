@@ -30,34 +30,13 @@ body {
 	border-radius: 20px;
 	box-shadow: 3px 3px 20px 2px #E6E5E5;
 	color: #474747;
-	margin-left: 20px;
-	margin-right: 20px;
+	margin: 30px 20px;
 
 	@media (max-width: 767px) {
 		border-radius: 0;
 		box-shadow: none;
 		margin-right: -15px;
     margin-left: -15px;
-	}
-}
-
-.content-top-radius {
-	border-top-left-radius: 20px;
-	border-top-right-radius: 20px;
-
-	@media (max-width: 767px) {
-		border-top-left-radius: 0;
-		border-top-right-radius: 0;
-	}
-}
-
-.content-bottom-radius {
-	border-bottom-left-radius: 20px;
-	border-bottom-right-radius: 20px;
-
-	@media (max-width: 767px) {
-		border-bottom-left-radius: 0;
-		border-bottom-right-radius: 0;
 	}
 }
 
@@ -75,11 +54,11 @@ body {
 
 .link {
 	bottom: 0;
+	border-radius: 5rem;
 	color: $white;
 	position: relative;
 	transition: all 0.3s ease;
 
-  
   &:hover {
     bottom: 5px;
     box-shadow: 6px 5px 8px rgba(0, 0, 0, 0.1);

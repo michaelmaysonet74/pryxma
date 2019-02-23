@@ -69,7 +69,7 @@ class Athena extends Component {
 					icon="bot.png" 
 				/>
 
-				<div className="row center margin-bottom content">
+				<div className="row center content">
 					<h1 className="center title">
 						Real. Intelligent.
 					</h1>

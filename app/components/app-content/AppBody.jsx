@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function AppBody({ info, subInfo, children }) {
 	return (
-		<div className="row margin-bottom content">
+		<div className="row content">
 			<h1 className="center title">
 				{ info }
 			</h1>
