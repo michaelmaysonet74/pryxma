@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import Section from './../Section.jsx';
 import AppHeader from './../app-content/AppHeader.jsx';
-import AppSubHeader from './../app-content/AppSubHeader.jsx';
 import AppBody from './../app-content/AppBody.jsx';
 import DownloadButton from './../app-content/SourceButton.jsx';
 import Space from './../Space.jsx';
@@ -41,8 +40,7 @@ class iOSApp extends Component {
 		return (
 			<Section>
 				<AppHeader title={ title } subtitle={ subtitle } icon={ icon } />
-				<AppSubHeader info={ info } subInfo={ subInfo } />
-				<AppBody>
+				<AppBody info={ info } subInfo={ subInfo }>
 					{ this.renderScreenShots(screenshots) }
 				</AppBody>
 				<DownloadButton
