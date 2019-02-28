@@ -1,9 +1,10 @@
 .back-to-top {
-	background: $background-lite-gray center 43%;
+	background: $white center 43%;
 	border-radius: 30px;
 	-moz-border-radius: 30px;
 	-webkit-border-radius: 30px;
 	bottom: 12px;
+	box-shadow: 3px 3px 10px 2px #E6E5E5;
 	height: 40px;
 	outline: none !important;
 	opacity: 0;
@@ -17,10 +18,6 @@
 		animation: fadeIn 0.5s ease-in 1;
 		animation-fill-mode: forwards;
 		display: block;
-
-		&:hover {
-			background: $text-gray center 43%;
-		}
 	}
 	
 	&.fade-out {
@@ -31,9 +28,9 @@
 }
 
 .back-to-top-icon {
-	color: $white;
-	font-size: 1.3em;
-	top:27%;
+	color: #8F9097;
+	font-size: 1.2rem;
+	top: 28%;
 }
 
 @keyframes fadeIn {
