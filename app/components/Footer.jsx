@@ -3,9 +3,7 @@ import React from 'react';
 export default function Footer() {
 	return (
 	<div className="footer container container-fluid">
-		<p className="text-center"> 
-			© 2019 pryxma.com. All Rights Reserved.
-		</p>
+		<p>© 2019 Pryxma, LLC</p>
 	</div>
 	);
 }

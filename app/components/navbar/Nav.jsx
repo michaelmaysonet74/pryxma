@@ -83,7 +83,7 @@ class Nav extends Component {
 							className="navbar-brand navbar-text-color"
 							href=""
 						>
-							Pryxma
+							p r y x m a
 						</a>
 					</div>
 					<div className="collapse navbar-collapse">
