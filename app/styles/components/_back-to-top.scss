@@ -17,18 +17,23 @@
 	&.fade-in {
 		animation: fadeIn 0.5s ease-in 1;
 		animation-fill-mode: forwards;
+		color: $background-lite-gray;
 		display: block;
+
+		&:hover {
+			color: $text-gray;
+		}
 	}
 	
 	&.fade-out {
 		animation: fadeOut 0.5s ease-in 1;
 		animation-fill-mode: forwards;
+		color: $background-lite-gray;
 		pointer-events: none;
 	}
 }
 
 .back-to-top-icon {
-	color: #8F9097;
 	font-size: 1.2rem;
 	top: 28%;
 }
