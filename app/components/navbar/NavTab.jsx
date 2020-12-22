@@ -1,27 +1,27 @@
 import React from 'react';
 import {
-	capitalize, 
-	concatWords, 
-	camelCaseIt
+    capitalize,
+    concatWords,
+    camelCaseIt
 } from 'Utils/strings-utils.js';
 
-function NavTab(props) {
-	let {
-		title,
-		handleClick,
-		isActive = false,
-	} = props;
+const NavTab = (props) => {
+    const {
+        title,
+        handleClick,
+        isActive = false,
+    } = props;
 
-	const capTitle = concatWords(capitalize(title));
-	const camelCaseTitle = camelCaseIt(title);
+    const capTitle = concatWords(capitalize(title));
+    const camelCaseTitle = camelCaseIt(title);
 
-	return (
-		<li id={ 'li' + capTitle } className={ isActive && 'active' } onClick={ handleClick }>
-			<a className="navbar-text-color" href={ `#${camelCaseTitle}` }>
-				{ title }
-			</a>
-		</li>
-	);
+    return (
+        <li id={'li' + capTitle} className={isActive && 'active'} onClick={handleClick}>
+            <a className="navbar-text-color" href={`#${camelCaseTitle}`}>
+                {title}
+            </a>
+        </li>
+    );
 }
 
 export default NavTab;

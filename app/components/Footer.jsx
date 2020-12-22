@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default function Footer() {
-	return (
-	<div className="footer container container-fluid">
-		<p>© 2019 Pryxma, LLC</p>
-	</div>
-	);
-}
+const Footer = () => {
+    return (
+        <div className="footer container container-fluid">
+            <p>© {new Date().getFullYear()} Pryxma, LLC</p>
+        </div>
+    );
+};
+
+export default Footer;

@@ -5,6 +5,6 @@ import Pryxma from 'Pryxma';
 import './styles/app.scss';
 
 ReactDOM.render(
-	<Pryxma />,
-	document.getElementById('app')
+    <Pryxma />,
+    document.getElementById('app')
 );
